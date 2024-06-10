@@ -1,5 +1,16 @@
 
-@import url('https://fonts.cdnfonts.com/css/valorant'); 
+@import url('https://fonts.cdnfonts.com/css/valorant');
+
+:root {
+    --bg-color: #32333d;
+    --txt-color: #b8b6b8;
+
+    --valorant-1: #FD4556;
+    --valorant-2: #BD3944;
+    --valorant-3: #53212B;
+    --valorant-4: #FFFBF5;
+    --valorant-5: #000000;
+}
 
 * {
     margin: 0;
