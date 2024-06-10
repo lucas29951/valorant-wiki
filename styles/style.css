@@ -26,4 +26,6 @@ body {
     font-family: 'VALORANT', sans-serif;
     font-size: 1.2rem;
     min-height: 100%;
+    background-image: url('../img/bg-valorant.png');
+    background-size: cover;
 }
