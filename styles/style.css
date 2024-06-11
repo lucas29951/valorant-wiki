@@ -3,7 +3,11 @@
 
 :root {
     --bg-color: #32333d;
+    --bg-color-sug: #282931;
+    --bg-color-img: #111823;
     --txt-color: #b8b6b8;
+    --txt-color-sug: #c6c5c6;
+    --txt-color-pri: #ffffff;
 
     --valorant-1: #FD4556;
     --valorant-2: #BD3944;
