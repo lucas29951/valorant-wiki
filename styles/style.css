@@ -30,6 +30,49 @@ body {
     font-family: 'VALORANT', sans-serif;
     font-size: 1.2rem;
     min-height: 100%;
-    background-image: url('../img/bg-valorant.png');
+    background-image: url('../img/VALORANT_Logo_V.jpg');
     background-size: cover;
+    background-position: 0;
+}
+
+.header {
+    background: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.1), rgba(0,0,0,0));
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+}
+
+.home {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.home-icon img {
+    width: 2rem;
+}
+
+.home-title {
+    margin: 0 1rem;
+    color: var(--txt-color-sug);
+}
+
+.home-title h5 {
+    font-size: 1.5rem;
+    font-weight: 200;
+}
+
+.navbar {
+    display: flex;
+    align-self: center;
+}
+
+.navbar a {
+    color: var(--txt-color-sug);
+    text-decoration: none;
+    margin-left: 3rem;
+}
+
+.navbar a:hover {
+    color: var(--valorant-2);
 }
