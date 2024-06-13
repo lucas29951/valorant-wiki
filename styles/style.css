@@ -1,158 +1,207 @@
 @import url('https://fonts.cdnfonts.com/css/valorant');
 
 :root {
-    --bg-color: #32333d;
-    --bg-color-sug: #282931;
-    --bg-color-img: #111823;
-    --txt-color: #b8b6b8;
-    --txt-color-sug: #c6c5c6;
-    --txt-color-pri: #ffffff;
+  --bg-color: #32333d;
+  --bg-color-sug: #282931;
+  --bg-color-img: #111823;
+  --txt-color: #b8b6b8;
+  --txt-color-sug: #c6c5c6;
+  --txt-color-pri: #ffffff;
 
-    --valorant-1: #FD4556;
-    --valorant-2: #BD3944;
-    --valorant-3: #53212B;
-    --valorant-4: #FFFBF5;
-    --valorant-5: #000000;
+  --valorant-1: #FD4556;
+  --valorant-2: #BD3944;
+  --valorant-3: #53212B;
+  --valorant-4: #FFFBF5;
+  --valorant-5: #000000;
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html {
-    height: 100%;
+  height: 100%;
 }
 
 body {
-    font-family: 'VALORANT', sans-serif;
-    font-size: 1.2rem;
-    min-height: 100%;
-    background-image: url('../img/VALORANT_Logo_V.jpg');
-    background-size: cover;
-    background-position: 0;
+  font-family: 'VALORANT', sans-serif;
+  font-size: 1.2rem;
+  min-height: 100%;
+  background-image: url('../img/VALORANT_Logo_V.jpg');
+  background-size: cover;
+  background-position: 0;
 }
 
 .header {
-    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0));
-    display: flex;
-    justify-content: space-between;
-    padding: 1rem 2rem;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0));
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
 }
 
 .home {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
 }
 
 .home-icon img {
-    width: 2rem;
+  width: 2rem;
 }
 
 .home-title {
-    margin: 0 1rem;
-    color: var(--txt-color-sug);
+  margin: 0 1rem;
+  color: var(--txt-color-sug);
 }
 
 .home-title h5 {
-    font-size: 1.5rem;
-    font-weight: 200;
+  font-size: 1.5rem;
+  font-weight: 200;
 }
 
 .navbar {
-    display: flex;
-    align-self: center;
+  display: flex;
+  align-self: center;
 }
 
 .navbar a {
-    color: var(--txt-color-sug);
-    text-decoration: none;
-    margin-left: 3rem;
+  color: var(--txt-color-sug);
+  text-decoration: none;
+  margin-left: 3rem;
 }
 
 .navbar a:hover {
-    color: var(--valorant-2);
+  color: var(--valorant-2);
 }
 
 .main {
-    display: flex;
-    flex-direction: column-reverse;
-    justify-content: center;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
 }
 
 .main h2 {
-    text-align: center;
-    color: var(--txt-color-sug);
-    margin-top: 2rem;
+  text-align: center;
+  color: var(--txt-color-sug);
+  margin-top: 2rem;
 }
 
 .container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 
 .card {
-    width: 195px;
-    height: 190px;
-    border-radius: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    /* transition: 0.2s ease-in-out; */
-    margin: 2rem;
+  --card-width: 20em;
+  --text-color: hsl(0, 0%, 100%);
+  --transition: all 0.2s cubic-bezier(0.13, 0.78, 0.3, 0.99);
+
+  font-size: 12px;
+  line-height: 2;
+
+  border-radius: 1em;
+  padding-bottom: 0.5em;
+  z-index: 20;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+
+  transition: all 0.2s ease-in;
+
+  margin: 1rem;
+  text-decoration: none;
 }
 
-.img {
-    height: 30%;
-    position: absolute;
-    /* transition: 0.2s ease-in-out; */
-    z-index: 1;
-    filter: drop-shadow(2px 4px 8px hsla(0, 0%, 100%, 0.5))
+.detial {
+  width: var(--card-width);
+  padding: 01em 1em;
+  color: var(--text-color);
+  transition: all 0.2s ease-in;
+
+  z-index: 1;
 }
 
-.textBox {
-    opacity: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 15px;
-    transition: 0.2s ease-in-out;
-    z-index: 2;
+.name {
+  font-size: 2em;
+  font-weight: bold;
 }
 
-.textBox>.text {
-    font-weight: bold;
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.textBox>.head {
-    font-size: 20px;
+.content {
+  color: var(--text-color);
+  width: var(--card-width);
+  position: absolute;
+  transform: rotate3D(0.4, 1, 0.4, 0deg) scale(0.4);
+  padding: 2em;
+  opacity: 0;
+  height: 20em;
+  overflow: hidden;
 }
 
-.textBox>.price {
-    font-size: 17px;
+.thumb {
+  width: var(--card-width);
+  height: 20em;
+  overflow: hidden;
+  transition: var(--transition);
+
+  z-index: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.textBox>span {
-    font-size: 12px;
-    color: lightgrey;
-}
-
-.card:hover>.textBox {
-    opacity: 1;
-}
-
-.card:hover>.img {
-    height: 65%;
-    filter: blur(7px);
+.thumb img {
+  margin-left: 30px;
 }
 
 .card:hover {
-    transform: scale(1.04);
+  box-shadow: 0px 20px 40px hsl(40, 60%, 0%, 0.4),
+    inset 1px 2px 4px rgba(255, 255, 255, 0.1);
+  transform: scale(1.1);
+}
+
+.card:hover .detial {
+  padding: 1em 2em;
+}
+
+.card:hover .thumb {
+  opacity: 0.2;
+  filter: blur(20px);
+  transform: scale(1.5);
+}
+
+.card:hover .content {
+  transform: none;
+  opacity: 1;
+  transition: var(--transition);
+}
+
+.details {
+  margin: 10px;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+  display: flex;
+  height: 80vh;
+  color: #fff;
+}
+
+.details .info > * {
+  margin: 1rem 0;
+}
+
+.details img {
+  max-width: 35%;
+  display: block;
+  margin-bottom: 10px;
 }
