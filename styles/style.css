@@ -208,6 +208,30 @@ body {
   right: 40px;
 }
 
+.info .abilities-container {
+  margin-top: 50px;
+}
+
+.abilities-container .abilities {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.ability-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.abilities .ability-item img {
+  width: 80px;
+  position: relative;
+  left: auto;
+}
+
 .details .subname {
   position: absolute;
   left: -5%;
