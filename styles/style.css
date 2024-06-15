@@ -192,16 +192,26 @@ body {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 
   display: flex;
+  flex-wrap: wrap;
   height: 80vh;
   color: #fff;
+  position: relative;
 }
 
 .details .info > * {
   margin: 1rem 0;
 }
 
+.details .info {
+  width: 50%;
+  position: absolute;
+  right: 40px;
+}
+
 .details img {
-  max-width: 35%;
+  max-width: 500px;
   display: block;
   margin-bottom: 10px;
+  position: absolute;
+  left: -50px;
 }
