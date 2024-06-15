@@ -13,6 +13,10 @@ document.addEventListener('DOMContentLoaded', () => {
         const agentName = document.createElement('h1');
         agentName.textContent = selectedAgent.displayName;
 
+        const agentNameShow = document.createElement('h1');
+        agentNameShow.className = 'subname';
+        agentNameShow.textContent = selectedAgent.displayName;
+
         const agentDescription = document.createElement('p');
         agentDescription.textContent = selectedAgent.description;
 
@@ -33,6 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
         divInfo.appendChild(subtitle);
         divInfo.appendChild(abilities);
 
+        agentDetailsContainer.appendChild(agentNameShow);
         agentDetailsContainer.appendChild(agentImage);
         agentDetailsContainer.appendChild(divInfo);
         const arrayColors = selectedAgent.backgroundGradientColors;
