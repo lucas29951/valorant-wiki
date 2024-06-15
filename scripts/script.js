@@ -5,28 +5,30 @@ const contenedor = document.querySelector('.container');
 
 
 document.addEventListener('DOMContentLoaded', async () => {
-        const response = await fetch(URL + 'agents');
-        const res = await response.json();
+    const response = await fetch(URL + 'agents');
+    const res = await response.json();
 
-        const title = document.createElement('h2');
-        title.textContent = 'Agents';
-        main.appendChild(title);
+    const title = document.createElement('h2');
+    title.textContent = 'Agents';
+    main.appendChild(title);
 
-        displayItems(res.data);
+    displayItems(res.data);
 });
 
 
 function displayItems(items) {
-    
+
     items.forEach(item => {
 
-        let elem = document.createElement('a');
-        elem.className = 'card';
-        const arrayColors = item.backgroundGradientColors;
-        elem.style.background = `linear-gradient(#${arrayColors[0]} 0%, #${arrayColors[3]} 100%)`;
-        elem.href = './details.html';
+        if (item.isPlayableCharacter) {
 
-        elem.innerHTML = `
+            let elem = document.createElement('a');
+            elem.className = 'card';
+            const arrayColors = item.backgroundGradientColors;
+            elem.style.background = `linear-gradient(#${arrayColors[0]} 0%, #${arrayColors[3]} 100%)`;
+            elem.href = './details.html';
+
+            elem.innerHTML = `
             <div class="card">
                 <div class="content">
                     <p class="some">${item.description}</p>
@@ -42,11 +44,12 @@ function displayItems(items) {
             </div>
         `;
 
-        elem.addEventListener('click', () => {
-            const data = JSON.parse(elem.getAttribute("data-item"));
-            localStorage.setItem('item-selected', JSON.stringify(item));
-        });
+            elem.addEventListener('click', () => {
+                const data = JSON.parse(elem.getAttribute("data-item"));
+                localStorage.setItem('item-selected', JSON.stringify(item));
+            });
 
-        contenedor.appendChild(elem);
+            contenedor.appendChild(elem);
+        }
     });
 }
