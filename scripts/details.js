@@ -6,6 +6,8 @@ document.addEventListener('DOMContentLoaded', () => {
     if (selectedAgent) {
         const divInfo = document.createElement('div');
         divInfo.className = 'info';
+        const divAbilities = document.createElement('div');
+        divAbilities.className = 'abilities-container';
 
         const subtitle = document.createElement('h3');
         subtitle.textContent = 'Abilities';
@@ -24,22 +26,33 @@ document.addEventListener('DOMContentLoaded', () => {
         agentImage.src = selectedAgent.fullPortrait;
         agentImage.alt = selectedAgent.displayName;
 
-        const abilities = document.createElement('ul');
+        const abilities = document.createElement('div');
+        abilities.className = 'abilities';
 
         selectedAgent.abilities.forEach(ability => {
-            let elem = document.createElement('li');
-            elem.textContent = `${ability.displayName}`;
-            abilities.appendChild(elem);
+            if (ability.displayIcon) {
+                let elem = document.createElement('div');
+                elem.className = 'ability-item';
+                let elemName = document.createElement('p');
+                elemName.textContent = `${ability.displayName}`;
+                let elemIcon = document.createElement('img');
+                elemIcon.src = `${ability.displayIcon}`;
+                elemIcon.alt = `${ability.displayName}`;
+                elem.appendChild(elemName);
+                elem.appendChild(elemIcon);
+                abilities.appendChild(elem);
+            }
         });
 
         divInfo.appendChild(agentName);
         divInfo.appendChild(agentDescription);
-        divInfo.appendChild(subtitle);
-        divInfo.appendChild(abilities);
+        divAbilities.appendChild(subtitle);
+        divAbilities.appendChild(abilities);
 
         agentDetailsContainer.appendChild(agentNameShow);
         agentDetailsContainer.appendChild(agentImage);
         agentDetailsContainer.appendChild(divInfo);
+        divInfo.appendChild(divAbilities);
         const arrayColors = selectedAgent.backgroundGradientColors;
         agentDetailsContainer.style.background = `linear-gradient(#${arrayColors[0]} 0%, #${arrayColors[3]} 100%)`;
     } else {
