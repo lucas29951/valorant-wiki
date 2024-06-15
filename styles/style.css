@@ -208,10 +208,20 @@ body {
   right: 40px;
 }
 
+.details .subname {
+  position: absolute;
+  left: -5%;
+  top: 200px;
+  transform: rotateZ(-90deg);
+  font-size: 7.5rem;
+  color: #ffffff59;
+}
+
 .details img {
   max-width: 500px;
   display: block;
   margin-bottom: 10px;
   position: absolute;
   left: -50px;
+  z-index: 10;
 }
