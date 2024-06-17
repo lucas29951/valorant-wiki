@@ -25,7 +25,6 @@ function displayItems(items) {
             let elem = document.createElement('a');
             elem.className = 'card';
             const arrayColors = item.backgroundGradientColors;
-            elem.style.background = `linear-gradient(#${arrayColors[0]} 0%, #${arrayColors[3]} 100%)`;
             elem.href = './details.html';
 
             elem.innerHTML = `
