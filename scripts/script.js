@@ -24,7 +24,6 @@ function displayItems(items) {
 
             let elem = document.createElement('a');
             elem.className = 'card';
-            const arrayColors = item.backgroundGradientColors;
             elem.href = './details.html';
 
             elem.innerHTML = `
