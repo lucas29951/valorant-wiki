@@ -7,6 +7,10 @@
   --txt-color: #b8b6b8;
   --txt-color-sug: #c6c5c6;
   --txt-color-pri: #ffffff;
+  
+  --main-color: #ff4654;
+  --secondary-color: #1a2632;
+  --third-color: #697785;
 
   --valorant-1: #FD4556;
   --valorant-2: #BD3944;
@@ -103,7 +107,6 @@ body {
   font-size: 12px;
   line-height: 2;
 
-  border-radius: 1em;
   padding-bottom: 0.5em;
   z-index: 20;
   overflow: hidden;
@@ -123,6 +126,7 @@ body {
   transition: all 0.2s ease-in;
 
   z-index: 1;
+  background: var(--main-color);
 }
 
 .name {
@@ -157,6 +161,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  border: 3px solid var(--main-color);
+  background: #1118238a;
 }
 
 .thumb img {
