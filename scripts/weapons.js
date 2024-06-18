@@ -23,23 +23,15 @@ function displayItems(items) {
         if (item.displayIcon) {
 
             let elem = document.createElement('a');
-            elem.className = 'card';
+            elem.className = 'unique-card';
             elem.href = './details.html';
 
             elem.innerHTML = `
-            <div class="card">
-                <div class="content">
-                    <p class="some">${item.displayName}</p>
+                <div class="background-overlay"></div>
+                <div class="card-content">
+                    <img class="img-content" src="${item.displayIcon}" alt="${item.displayName}">
+                    <div class="card-title">${item.displayName}</div>
                 </div>
-                <div class="thumb">
-                    <img src="${item.displayIcon}" alt="${item.displayName}">
-                </div>
-                <div class="detial">
-                    <div class="title">
-                        <p class="name">${item.displayName}</p>
-                    </div>
-                </div>
-            </div>
         `;
 
             elem.addEventListener('click', () => {
