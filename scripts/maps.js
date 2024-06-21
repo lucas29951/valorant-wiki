@@ -23,24 +23,34 @@ function displayItems(items) {
         if (item.displayIcon) {
 
             let elem = document.createElement('a');
-            elem.className = 'card';
+            elem.className = 'map-card';
             elem.href = './details.html';
 
             elem.innerHTML = `
-            <div class="card">
-                <div class="content">
-                    <p class="some">${item.coordinates}</p>
-                </div>
-                <div class="thumb">
-                    <img src="${item.displayIcon}" alt="${item.displayName}">
-                </div>
-                <div class="detial">
-                    <div class="title">
-                        <p class="name">${item.displayName}</p>
+            <div class="section_our_solution">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12">
+                        <div class="our_solution_category">
+                            <div class="solution_cards_box">
+                                <div class="solution_card">
+                                    <div class="hover_color_bubble"></div>
+                                    <div class="so_top_icon">
+                                        <img src="${item.listViewIcon}" alt="${item.displayName}">
+                                    </div>
+                                    <div class="solu_title">
+                                        <div>${item.displayName}</div>
+                                    </div>
+                                    <div class="solu_description">
+                                        <p>${item.coordinates}</p>
+                                        <button class="read_more_btn" type="button">Read More</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        `;
+            `;
 
             elem.addEventListener('click', () => {
                 const data = JSON.parse(elem.getAttribute("data-item"));
